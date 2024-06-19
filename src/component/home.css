@@ -1,0 +1,52 @@
+.btn:hover{
+transform: scale(0.9);
+
+color: white;
+background-color: #b95e31;
+
+}
+.btn{
+    transition: 2s ease ;
+}
+
+.but{
+    transition: 2s ease ; 
+}
+.but:hover{
+ background-color:  #007200;
+ transform: scale(0.9);
+ color: white;
+}
+
+
+
+ 
+/* .bc{
+    background-image: linear-gradient(to_top,rgba(0,0,0,0.5),rgb(0,0,0,0.5));
+}
+
+ .bg{
+    position: absolute;
+    animation: change 20s infinite ease-in-out;
+}
+
+
+
+.bg:hover{
+    animation-play-state: paused;
+} 
+
+@keyframes change {
+    0%{
+        background-image: url("../assets/agro.jpeg" );
+    }
+     100%{
+        background-image: url("../assets/bg.jpeg");
+    }
+     
+}
+
+ */ 
+
+
+ 

@@ -1,0 +1,15 @@
+.a:hover{
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(4, 83, 4);
+    color:rgb(4, 83, 4) ;
+    text-shadow: 3px 5px 10px rgb(4, 83, 4), -3px -5px 10px rgb(4, 83, 4) ;
+    transform: scale(1.1);
+}
+.a.active{
+     padding-bottom: 2px;
+    border-bottom: 2px solid rgb(4, 83, 4);
+    color:rgb(4, 48, 4) ;
+}
+.a{
+    transition: 2s ease;
+}
