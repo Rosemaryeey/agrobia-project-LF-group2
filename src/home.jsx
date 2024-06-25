@@ -1,11 +1,7 @@
 // import React from "react";
 // import React, { useEffect } from "react";
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import Aos from "aos";
 import "aos/dist/aos.css";
 import "./component/home.css";
-import EmblaCarousel from "./component/EmblaCarousel.jsx";
 import service2 from "./assets/service2.png";
 import service1 from "./assets/service1.png";
 import service3 from "./assets/service3.png";
@@ -26,12 +22,12 @@ import blogimg1 from "./assets/image 31.png";
 import blogimg2 from "./assets/image 32.png";
 import blogimg3 from "./assets/image 33.png";
 import "./app.js";
-
+import Landing from "./component/landing.jsx";
 
 const OPTIONS = { dragFree: true, loop: true };
-const SLIDE_COUNT = 3;
+// const SLIDE_COUNT = 3;
 // const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-const SLIDES= [
+const SLIDES = [
   {
     url: "./assets/agro.jpeg",
   },
@@ -46,7 +42,7 @@ const SLIDES= [
 export const Home = () => {
   return (
     <div>
-      <div className="banner-div">
+      {/* <div className="banner-div">
         <div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           <h3>Welcome To Agrobia</h3>
@@ -68,7 +64,9 @@ export const Home = () => {
             Become a Seller
           </a>
         </div>
-      </div>
+      </div> */}
+
+      <Landing />
 
       {/* services section */}
       <section id="service">
@@ -104,12 +102,13 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
       {/* categories section */}
       <section id="category">
         <div className="title">
           <h3>Categories</h3>
         </div>
-        <div className="categories    ">
+        <div className="grid grid-cols-3 gap-4    ">
           <div className="categories-div">
             <img src={Fa} alt="" />
             <p>
@@ -301,7 +300,7 @@ export const Home = () => {
         <div className="title">
           <h3>Our Blog</h3>
         </div>
-        <div className="blog">
+        <div className="grid grid-cols-3 gap-3">
           <div className="blog-div">
             <div className="user-info">
               <img src={profilepic} alt="" />
