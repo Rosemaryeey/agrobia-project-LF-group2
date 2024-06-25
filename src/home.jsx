@@ -1,10 +1,11 @@
 // import React from "react";
 // import React, { useEffect } from "react";
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./component/home.css";
+import Product from "./product.jsx";
 import EmblaCarousel from "./component/EmblaCarousel.jsx";
 import service2 from "./assets/service2.png";
 import service1 from "./assets/service1.png";
@@ -27,11 +28,8 @@ import blogimg2 from "./assets/image 32.png";
 import blogimg3 from "./assets/image 33.png";
 import "./app.js";
 
-
 const OPTIONS = { dragFree: true, loop: true };
-const SLIDE_COUNT = 3;
-// const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-const SLIDES= [
+const SLIDE_COUNT = [
   {
     url: "./assets/agro.jpeg",
   },
@@ -42,13 +40,14 @@ const SLIDES= [
     url: "./assets/agro2.jpeg",
   },
 ];
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export const Home = () => {
   return (
     <div>
       <div className="banner-div">
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         <div>
-          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           <h3>Welcome To Agrobia</h3>
         </div>
         <p>
@@ -194,7 +193,7 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href="">
+            <a href={Product}>
               <button>View Product</button>
             </a>
           </div>
@@ -206,7 +205,7 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href="">
+            <a href={Product}>
               <button>View Product</button>
             </a>
           </div>
@@ -218,7 +217,7 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href="">
+            <a href={Product}>
               <button>View Product</button>
             </a>
           </div>
@@ -230,7 +229,7 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href="">
+            <a href={Product}>
               <button>View Product</button>
             </a>
           </div>
@@ -242,7 +241,7 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href="">
+            <a href="product.jsx">
               <button>View Product</button>
             </a>
           </div>
@@ -254,13 +253,13 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href="">
+            {/* <Link to="">
               <button>View Product</button>
-            </a>
+            </Link> */}
           </div>
         </div>
 
-        <a href="">
+        <a href="./product">
           <div className="more-btn">View more &nbsp; &#8594;</div>
         </a>
       </section>
@@ -297,7 +296,7 @@ export const Home = () => {
         </a>
       </section>
       {/* blog section */}
-      <section id="blog">
+      <section id="blog" className="flex items-center justify-center flex-col">
         <div className="title">
           <h3>Our Blog</h3>
         </div>

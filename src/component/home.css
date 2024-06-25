@@ -105,17 +105,19 @@ background-color: #b95e31;
 
 /* ===================services section=========================== */
 #service{
-    padding: 10%;
+    padding: 5%;
     text-align: center;
+    
 
 }
 #services{
-    width: screen;
+    width: 90vw;
     height: auto;
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
+     
 }
 .title{
     padding-bottom: 4%;
@@ -145,11 +147,12 @@ background-color: #b95e31;
 }
 .service-div{
     display: inline;
-    width: 300px;
+    width: 330px;
     background-color: #eee;
     border-radius: 20px;
     margin: 10px 0;
     text-align: left;
+   
 }
 .service-div p{
     font-size: 20px;
@@ -166,17 +169,17 @@ background-color: #b95e31;
     padding: 5%;
     /* text-align: center; */
 }
-.categories{
-    /* max-width: 800vw; */
+/* .categories{
+    max-width: 800vw;
     width: 100vw;
     height: auto;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: space-evenly;
     overflow-x: scroll;
     gap: 5%;
      border: 2px solid black;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 .categories::-webkit-scrollbar{
     width: 10px;
@@ -189,7 +192,7 @@ background-color: #b95e31;
     border: 2px solid black;
     
     /* text-align: left; */
-    /* color: #007200; */
+    /* color: #007200;
 }
 .category-div img{
     border-top-left-radius: 20px;
@@ -199,7 +202,7 @@ background-color: #b95e31;
 .category-div p{
     font-size: 15px;
     padding: 5px 15px;
-}
+} */
 /* =============================== About =================================== */
 #about{
     width: screen;
@@ -210,6 +213,7 @@ background-color: #b95e31;
     padding: 5%;
     background-color: #eee;
     flex-wrap: wrap;
+  
 }
 #about img{
     width: 35%;
@@ -313,7 +317,7 @@ background-color: #b95e31;
 }
 /* ===========================blog========================== */
 #blog{
-    padding: 10%;
+    padding: 5%;
   
 }
 .blog{
@@ -321,19 +325,19 @@ background-color: #b95e31;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    border: 2px solid black;
+   
 }
 
 .blog-div p{
     width: 300px;
-     border: 2px solid black;
+   
 }
 .user-info{
     width: 20vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-     border: 2px solid black;
+   
 }
 .user-info img{
     width: 40px;

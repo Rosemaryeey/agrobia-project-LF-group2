@@ -1,18 +1,25 @@
 import React from "react";
 import "./App.css";
-// import {Routes,Route} from "react-router-dom"
+import {Routes,Route} from "react-router-dom"
 // import Login from "./login";
 // import Signup from "./signup";
 import Header from "./component/header";
 import Footer from "./component/footer";
 import Home from "./home";
+import Product from "./product"
+
 
 
 function App() {
   return (
     <div>
       <Header />
-      <Home />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+      </Routes>
+   
       <Footer />
     </div>
   );
