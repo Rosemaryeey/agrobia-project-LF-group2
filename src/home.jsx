@@ -67,7 +67,9 @@ export const Home = () => {
             Become a Seller
           </a>
         </div>
-      </div>
+      </div> 
+
+      <Landing />
 
       {/* services section */}
       <section id="service">
@@ -103,12 +105,13 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
       {/* categories section */}
       <section id="category">
         <div className="title">
           <h3>Categories</h3>
         </div>
-        <div className="categories    ">
+        <div className="grid grid-cols-3 gap-4    ">
           <div className="categories-div">
             <img src={Fa} alt="" />
             <p>
@@ -300,7 +303,7 @@ export const Home = () => {
         <div className="title">
           <h3>Our Blog</h3>
         </div>
-        <div className="blog">
+        <div className="grid grid-cols-3 gap-3">
           <div className="blog-div">
             <div className="user-info">
               <img src={profilepic} alt="" />
