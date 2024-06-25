@@ -1,0 +1,32 @@
+/* ===========================footer========================== */
+footer{
+    padding: 5%;
+    background-color: #82d4ab;
+}
+.footer-div{
+    width: screen;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+footer nav{
+    display: inline;
+}
+footer nav a{
+    display: block;
+    margin-top: 20px;
+}
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+    margin-top: 10%;
+}
+.socials a{
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+    /* background-color: #007200; */
+}

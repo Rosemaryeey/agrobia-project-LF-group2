@@ -1,16 +1,19 @@
 import React from "react";
-import "./App.css" 
+import "./App.css";
 // import {Routes,Route} from "react-router-dom"
 // import Login from "./login";
 // import Signup from "./signup";
-import Header from "./component/header"
+import Header from "./component/header";
+import Footer from "./component/footer";
 import Home from "./home";
+
 
 function App() {
   return (
-    <div >
-       <Header/>
-       <Home />
+    <div>
+      <Header />
+      <Home />
+      <Footer />
     </div>
   );
 }

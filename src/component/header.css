@@ -13,3 +13,95 @@
 .a{
     transition: 2s ease;
 }
+.homenav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #eee;
+    z-index: 100000;
+}
+.homenav .register-btn{
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.homenav .register-btn a{
+    text-decoration: none;
+    display: inline;
+    width: 90px;
+    /* height: 40px; */
+    padding: 5px;
+    text-align: center;
+    background-color: #007200;
+    color: #eee;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.homenav .register-btn a:nth-child(2){
+    position: absolute;
+    right: 19%;
+    background: transparent;
+    border: 1px solid #007200;
+    color: #007200;
+    /* padding: 5px; */
+}
+.homenav .register-btn a:nth-child(2):hover{
+    background-color: #007200;
+    color: #fff;
+}
+
+.bi-list{
+    display: none;
+    font-size: 40px;
+    color: #007200;
+    /* background-color: #007200; */
+}
+.homenav nav{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.homenav .user-div a:nth-child(3){
+    text-decoration: none;
+    display: inline;
+    width: 90px;
+    /* height: 40px; */
+    padding: 5px;
+    text-align: center;
+    background-color: #007200;
+    color: #eee;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.homenav nav{
+    text-align: center;
+    width: 50vw;
+    font-weight: 600;
+}
+/* .logo img{
+    width: 40px;
+} */
+ .user-div{
+    display: none;
+ }
+.user-div a{
+    margin: 0 2px;
+}
+.user-div a:first-child img{
+    width: 40px;
+}
+.user-div a:nth-child(2) img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.user-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
