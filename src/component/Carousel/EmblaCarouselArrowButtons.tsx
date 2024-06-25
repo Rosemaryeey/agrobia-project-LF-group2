@@ -1,6 +1,23 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, {
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
+import { EmblaCarouselType } from "embla-carousel";
+import "./carousel.css";
 
-export const usePrevNextButtons = (emblaApi, onButtonClick) => {
+type UsePrevNextButtonsType = {
+  prevBtnDisabled: boolean;
+  nextBtnDisabled: boolean;
+  onPrevButtonClick: () => void;
+  onNextButtonClick: () => void;
+};
+
+export const usePrevNextButtons = (
+  emblaApi: EmblaCarouselType | undefined,
+  onButtonClick?: (emblaApi: EmblaCarouselType) => void
+): UsePrevNextButtonsType => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
@@ -16,7 +33,7 @@ export const usePrevNextButtons = (emblaApi, onButtonClick) => {
     if (onButtonClick) onButtonClick(emblaApi);
   }, [emblaApi, onButtonClick]);
 
-  const onSelect = useCallback((emblaApi) => {
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setPrevBtnDisabled(!emblaApi.canScrollPrev());
     setNextBtnDisabled(!emblaApi.canScrollNext());
   }, []);
@@ -36,7 +53,14 @@ export const usePrevNextButtons = (emblaApi, onButtonClick) => {
   };
 };
 
-export const PrevButton = (props) => {
+type PropType = PropsWithChildren<
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >
+>;
+
+export const PrevButton: React.FC<PropType> = (props) => {
   const { children, ...restProps } = props;
 
   return (
@@ -56,7 +80,7 @@ export const PrevButton = (props) => {
   );
 };
 
-export const NextButton = (props) => {
+export const NextButton: React.FC<PropType> = (props) => {
   const { children, ...restProps } = props;
 
   return (
