@@ -1,8 +1,8 @@
 import React from "react";
 import "./header.css";
 import Img from "../assets/logo copy.png";
-import { MdMenu } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { MdMenu, MdPerson, MdShoppingCart } from "react-icons/md";
+import {Link } from "react-router-dom";
 
 function Header() {
 
@@ -12,31 +12,36 @@ function Header() {
         <img src={Img} alt="" />
       </div>
       <nav>
-        <a href="">Home</a>
+        <Link to="/">Home</Link>
         <a href="#service">Service</a>
-        <a href="">About</a>
-        <a href="">Blog</a>
+        <Link to="/shop">Shop</Link>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
         <a href="#testimonial">Testimonials</a>
       </nav>
       <div id="dropdown-menu" className="dropdown-menu">
         <a href="#hero">Home</a>
         <a href="#feature">Features</a>
         <a href="#pricing">Pricing</a>
+        <Link to="/shop">Shop</Link>
         <a href="#testimonial">Testimonials</a>
         <a href="#faqs">FAQ</a>
         <a href="#contact">Contact Us</a>
       </div>
-      <i className="bi bi-list menu-icon" ></i>
+      <i className="bi bi-list menu-icon"></i>
 
       <div className="user-div">
-        <a href="" className="icon-cart">
-          <img src="" alt="" />
-          <span>0</span>
-        </a>
+        <Link to="/cart" className="icon-cart relative ">
+          {/* <img src="" alt="" /> */}
+          <MdShoppingCart className=" text-3xl " />
+          <span className=" absolute  w-5 h-5 bottom-0 left-5  bg-[#007200] rounded-full flex items-center justify-center text-white">
+            0
+          </span>
+        </Link>
         &nbsp; &nbsp; &nbsp;
-        <a href="">
-          <img src="" alt="" />
-        </a>
+        <Link to="" className="text-2xl cursor-pointer">
+          <MdPerson />
+        </Link>
         <a href="">
           <span>logout</span>
         </a>

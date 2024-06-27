@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
-import {Routes,Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 // import Login from "./login";
 // import Signup from "./signup";
 import Header from "./component/header";
 import Footer from "./component/footer";
 import Home from "./home";
-import Product from "./product"
-
-
+import Product from "./product";
+import Shop from "./shop";
+import Cart from "./cart";
 
 function App() {
   return (
@@ -18,8 +18,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
-   
+
       <Footer />
     </div>
   );

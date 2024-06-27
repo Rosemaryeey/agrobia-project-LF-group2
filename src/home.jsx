@@ -6,7 +6,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "./component/home.css";
 import Product from "./product.jsx";
-import EmblaCarousel from "./component/EmblaCarousel.jsx";
+import EmblaCarousel from "./component/Carousel/EmblaCarousel.tsx";
+import Landing from "./component/landing.jsx";
+// import Landing2 from "./component/landing2.jsx";
 import service2 from "./assets/service2.png";
 import service1 from "./assets/service1.png";
 import service3 from "./assets/service3.png";
@@ -26,7 +28,7 @@ import profilepic from "./assets/buy-1.jpg";
 import blogimg1 from "./assets/image 31.png";
 import blogimg2 from "./assets/image 32.png";
 import blogimg3 from "./assets/image 33.png";
-import "./app.js";
+// import "./app.js";
 
 const OPTIONS = { dragFree: true, loop: true };
 const SLIDE_COUNT = [
@@ -43,9 +45,12 @@ const SLIDE_COUNT = [
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export const Home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 600, delay: 200 });
+  }, []);
   return (
     <div>
-      <div className="banner-div">
+      {/* <div className="banner-div">
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         <div>
           <h3>Welcome To Agrobia</h3>
@@ -67,12 +72,12 @@ export const Home = () => {
             Become a Seller
           </a>
         </div>
-      </div> 
+      </div> */}
 
       <Landing />
 
       {/* services section */}
-      <section id="service">
+      <section id="service" data-aos="fade-up">
         <div className="title">
           <h3>Our Services</h3>
         </div>
@@ -104,10 +109,13 @@ export const Home = () => {
             </p>
           </div>
         </div>
+        <Link to="">
+          <div className="more-btn">View more &nbsp; &#8594;</div>
+        </Link>
       </section>
 
       {/* categories section */}
-      <section id="category">
+      <section id="category" data-aos="fade-up">
         <div className="title">
           <h3>Categories</h3>
         </div>
@@ -137,7 +145,10 @@ export const Home = () => {
               laudantium voluptatem.
             </p>
           </div>
-          <div className="categories-div">
+          <Link to="">
+            <div className="more-btn">View more &nbsp; &#8594;</div>
+          </Link>
+          {/* <div className="categories-div">
             <img src={F} alt="" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
@@ -152,11 +163,11 @@ export const Home = () => {
               labore modi nihil nam sit rerum mollitia perferendis nobis
               laudantium voluptatem.
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
       {/* about section */}
-      <section id="about">
+      <section id="about" data-aos="zoom-in">
         <img src={aboutimg} alt="" />
         <div className="about">
           <div className="about-text">
@@ -183,7 +194,7 @@ export const Home = () => {
         </div>
       </section>
       {/* products section */}
-      <section id="products">
+      <section id="products" data-aos="fade-up">
         <div className="title">
           <h3>Products</h3>
         </div>
@@ -196,9 +207,9 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href={Product}>
+            <Link to="/product">
               <button>View Product</button>
-            </a>
+            </Link>
           </div>
           <div className="product-div">
             <img src={product2} alt="" />
@@ -208,9 +219,9 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href={Product}>
+            <Link to="/product">
               <button>View Product</button>
-            </a>
+            </Link>
           </div>
           <div className="product-div">
             <img src={product3} alt="" />
@@ -220,9 +231,9 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href={Product}>
+            <Link to="/product">
               <button>View Product</button>
-            </a>
+            </Link>
           </div>
           <div className="product-div">
             <img src={product4} alt="" />
@@ -232,9 +243,9 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href={Product}>
+            <Link to="/product">
               <button>View Product</button>
-            </a>
+            </Link>
           </div>
           <div className="product-div">
             <img src={product5} alt="" />
@@ -244,9 +255,9 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            <a href="product.jsx">
+            <Link to="/product">
               <button>View Product</button>
-            </a>
+            </Link>
           </div>
           <div className="product-div">
             <img src={product6} alt="" />
@@ -256,18 +267,18 @@ export const Home = () => {
             <small>#900.00</small>
             <br />
 
-            {/* <Link to="">
+            <Link to="/product">
               <button>View Product</button>
-            </Link> */}
+            </Link>
           </div>
         </div>
 
-        <a href="./product">
+        <Link to="">
           <div className="more-btn">View more &nbsp; &#8594;</div>
-        </a>
+        </Link>
       </section>
       {/* testimonial section */}
-      <section id="testimonial">
+      <section id="testimonial" data-aos="fade-up">
         <div className="title">
           <h3>Testimonial</h3>
         </div>
@@ -299,7 +310,11 @@ export const Home = () => {
         </a>
       </section>
       {/* blog section */}
-      <section id="blog" className="flex items-center justify-center flex-col">
+      <section
+        id="blog"
+        className="flex items-center justify-center flex-col"
+        data-aos="zoom-in"
+      >
         <div className="title">
           <h3>Our Blog</h3>
         </div>
@@ -337,6 +352,9 @@ export const Home = () => {
             <p>From our farm to your table: Agrobia's farm to table slogan</p>
           </div>
         </div>
+        <Link to="">
+          <div className="more-btn">View more &nbsp; &#8594;</div>
+        </Link>
       </section>
     </div>
   );
