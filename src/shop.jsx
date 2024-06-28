@@ -1,9 +1,8 @@
 import React from "react";
 import { MdSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Hm from "./assets/Frame 12561.png"
-import Fr from "./assets/Frame 12622.png"
-import Ok from "./assets/Frame 12692.png"
+import Apple from "./assets/apple.png"
+import Star from "./assets/Frame 12598.png"
 
 function Shop() {
   return (
@@ -20,31 +19,197 @@ function Shop() {
         </div>
       </div>
 
-      <div className="h-[240vh] flex flex-col items-center justify-around w-[90vw] ">
-        <div className=" flex items-center justify-between w-[80vw] text-3xl font-bold h-[30vh]">
-          <h2>Showing 1-12 of 20</h2>
+      <div className="h-[260vh] flex flex-col items-center justify-around w-[90vw] ">
+        <div className=" flex items-center justify-between w-[80vw]  h-[30vh]">
+          <h2 className="text-3xl font-bold">Showing 1-12 of 20</h2>
 
-          <div className=" flex items-center justify-center border-[1px] border-black ">
+          <div className=" flex items-center justify-start ">
             <input
               type="search"
               name=""
               id=""
-              className="border-[1px] bg-transparent"
+              className="bg-transparent py-3 px-14 border-2 border-green-700  rounded-xl  "
             />
             <button>
-              <MdSearch />
+              <MdSearch className="text-2xl relative right-9" />
             </button>
           </div>
         </div>
 
-        <div className="h-[210vh] flex flex-col items-center justify-around ">
-          <div className=" flex w-[90vw] items-center justify-center">
-            <img src={Hm} alt="" className="w-[10vw] h-[40vh]" />
-            <img src={Fr} alt="" className="w-[70vw] h-[40vh]" />
+        <div className="h-[240vh] flex flex-col items-center justify-around  ">
+          <div className=" flex w-[90vw] items-center justify-around">
+            <Link
+              to="/product"
+              className=" out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col   flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
           </div>
-          <img src={Ok} alt="" className="w-[80vw] h-[40vh]" />
-          <img src={Ok} alt="" className="w-[80vw] h-[40vh]" />
-          <img src={Ok} alt="" className="w-[80vw] h-[40vh]" />
+          <div className=" flex w-[90vw] items-center justify-around">
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+          </div>
+          <div className=" flex w-[90vw] items-center justify-around">
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+          </div>
+          <div className=" flex w-[90vw] items-center justify-around">
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col  flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col   flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col   flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+            <Link
+              to="/product"
+              className="out w-[18vw] h-[23vw] flex-col   flex items-center justify-around shadow-black shadow-md"
+            >
+              <img src={Apple} alt="" className="w-[15vw]" />
+              <img src={Star} alt="" />
+              <h1>Apple</h1>
+              <p>$14.00</p>
+            </Link>
+          </div>
+
+          <div className="w-[20vw]  h-10 flex items-center justify-evenly">
+            <Link
+              to="/shop"
+              className="out w-5 h-5 rounded-full border-2 border-black flex items-center justify-center"
+            >
+              1
+            </Link>
+            <Link
+              to="/shop"
+              className="out w-5 h-5 rounded-full border-2 border-black flex items-center justify-center"
+            >
+              2
+            </Link>
+            <Link
+              to="/shop"
+              className="out w-5 h-5 rounded-full border-2 border-black flex items-center justify-center"
+            >
+              3
+            </Link>
+          </div>
         </div>
       </div>
     </div>

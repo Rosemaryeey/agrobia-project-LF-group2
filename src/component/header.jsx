@@ -2,10 +2,14 @@ import React from "react";
 import "./header.css";
 import Img from "../assets/logo copy.png";
 import { MdMenu, MdPerson, MdShoppingCart } from "react-icons/md";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Header() {
 
+
+
+
+
+const Header = ({ cartItems }) => {
   return (
     <div className="homenav">
       <div className="logo">
@@ -31,12 +35,15 @@ function Header() {
       <i className="bi bi-list menu-icon"></i>
 
       <div className="user-div">
-        <Link to="/cart" className="icon-cart relative ">
+        <Link to="/addtocart" className="icon-cart relative ">
           {/* <img src="" alt="" /> */}
           <MdShoppingCart className=" text-3xl " />
-          <span className=" absolute  w-5 h-5 bottom-0 left-5  bg-[#007200] rounded-full flex items-center justify-center text-white">
-            0
+           {cartItems > 0 && (
+             <span className=" absolute  w-5 h-5 bottom-0 left-5  bg-[#007200] rounded-full flex items-center justify-center text-white">
+            {cartItems}
           </span>
+
+           )}
         </Link>
         &nbsp; &nbsp; &nbsp;
         <Link to="" className="text-2xl cursor-pointer">
@@ -62,5 +69,5 @@ function Header() {
     </div> */}
     </div>
   );
-}
+};
 export default Header;

@@ -1,4 +1,10 @@
 
 
+.out{
+    transition: 2s ease-out;
+}
 
+.out:hover{
+   transform: scale(1.1);
+}
 
