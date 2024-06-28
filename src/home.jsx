@@ -28,6 +28,7 @@ import profilepic from "./assets/buy-1.jpg";
 import blogimg1 from "./assets/image 31.png";
 import blogimg2 from "./assets/image 32.png";
 import blogimg3 from "./assets/image 33.png";
+import Carousel from "./component/carousel.jsx";
 // import "./app.js";
 
 const OPTIONS = { dragFree: true, loop: true };
@@ -73,9 +74,7 @@ export const Home = () => {
           </a>
         </div>
       </div> */}
-
       <Landing />
-
       {/* services section */}
       <section id="service" data-aos="fade-up">
         <div className="title">
@@ -113,58 +112,18 @@ export const Home = () => {
           <div className="more-btn">View more &nbsp; &#8594;</div>
         </Link>
       </section>
-
       {/* categories section */}
       <section id="category" data-aos="fade-up">
         <div className="title">
           <h3>Categories</h3>
         </div>
-        <div className="grid grid-cols-3 gap-4    ">
-          <div className="categories-div">
-            <img src={Fa} alt="" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-              labore modi nihil nam sit rerum mollitia perferendis nobis
-              laudantium voluptatem.
-            </p>
-          </div>
-          <div className="categories-div">
-            <img src={Far} alt="" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-              labore modi nihil nam sit rerum mollitia perferendis nobis
-              laudantium voluptatem.
-            </p>
-          </div>
-
-          <div className="categories-div">
-            <img src={F} alt="" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-              labore modi nihil nam sit rerum mollitia perferendis nobis
-              laudantium voluptatem.
-            </p>
-          </div>
+       
+          <Carousel />
           <Link to="">
             <div className="more-btn">View more &nbsp; &#8594;</div>
           </Link>
-          {/* <div className="categories-div">
-            <img src={F} alt="" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-              labore modi nihil nam sit rerum mollitia perferendis nobis
-              laudantium voluptatem.
-            </p>
-          </div>
-          <div className="categories-div">
-            <img src={F} alt="" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-              labore modi nihil nam sit rerum mollitia perferendis nobis
-              laudantium voluptatem.
-            </p>
-          </div> */}
-        </div>
+        
+        
       </section>
       {/* about section */}
       <section id="about" data-aos="zoom-in">

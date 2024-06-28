@@ -1,13 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Ig from "./assets/apple.png";
-import Mg from "./assets/Frame 12598.png"
-import Ap from "./assets/image 60.png"
+import Mg from "./assets/Frame 12598.png";
+import Ap from "./assets/image 60.png";
 import Pl from "./assets/image 61.png";
-import Ci from "./assets/instagram.png"
-import So from "./assets/Component 1.png"
-import Al from "./assets/twitter.png"
-function Product() {
+import Ci from "./assets/instagram.png";
+import So from "./assets/Component 1.png";
+import Al from "./assets/twitter.png";
+
+const Product = ({ onAddToCart }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  //   const handleAddToCart = () => {
+  //   onAddToCart(quantity);
+  // };
+
+
+  const handleAddToCart = () => {
+  alert(`Added ${onAddToCart(quantity)} item(apple) to cart`);
+  };
+
+   const handleAddToCar = () => {
+      (`Added ${onAddToCart(quantity)} item(apple) to cart`);
+    };
   return (
     <div className=" flex flex-col items-center justify-center " id="product">
       <div
@@ -54,20 +79,57 @@ function Product() {
           <h4 className="font-bold text-xl">Type: Apple</h4>
           <h4 className="font-bold text-xl">Weight:1kg</h4>
 
-          <div className="  flex  items-center  justify-around ">
+          {/* <div className="  flex  items-center  justify-around ">
             <h2 className=" px-[10px] bg-slate-300 text-xl">1</h2>
             <div className=" flex flex-col">
               <button className="m-2 px-[10px] bg-slate-300 text-xl">-</button>
               <button className="m-2 px-[10px] bg-slate-300 text-xl ">+</button>
             </div>
+          </div> */}
+
+          <div className="flex items-center justify-center">
+            <div className="">
+              <div className="  flex  items-center  justify-around    ">
+                <span className=" px-[10px] bg-slate-300 text-xl">
+                  {quantity}
+                </span>
+                <div className=" flex flex-col">
+                  <button
+                    onClick={handleDecrement}
+                    className="m-2 px-[10px] bg-slate-300 text-xl"
+                  >
+                    -
+                  </button>
+                  <button
+                    onClick={handleIncrement}
+                    className="m-2 px-[10px] bg-slate-300 text-xl"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <button
+                onClick={handleAddToCart}
+                className="mt-4 bg-green-700 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Add to Cart
+              </button>
+            </div>
           </div>
-          <div className=" border-t-2 w-[20vw] flex justify-around items-center  ">
+          <div className=" border-t-2 w-[42vw] flex justify-around items-center  ">
             <h3 className=" text-xl font-bold">share</h3>
             <div className=" flex justify-around items-center  w-[8vw]  ">
               <img className="w-[1vw]" src={So} alt="" />
               <img className="w-[1vw]" src={Ci} alt="" />
               <img className="w-[1vw]" src={Al} alt="" />
             </div>
+
+            <Link
+              to="/cart"
+              className="mt-4 bg-green-700 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Your Cart
+            </Link>
           </div>
         </div>
       </div>
@@ -96,13 +158,18 @@ function Product() {
           <textarea
             name="Message"
             id="text"
-            
             className="p-2 w-[40vw] h-[30vh] border-[1px] border-black resize-none "
           ></textarea>
         </div>
+        <Link
+          to="rosemaryoguezuonu@gmail.com"
+          className="mt-4 bg-green-700 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
+        >
+         send
+        </Link>
       </div>
     </div>
   );
-}
+};
 
 export default Product;
