@@ -1,0 +1,86 @@
+.register-container{
+    width: screen;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.google-auth{
+    width: 400px;
+    padding: 8px;
+    /* height: 30px; */
+    text-align: center;
+    color: #fff;
+    background-color: #DB5B3F;
+    text-decoration: none;
+}
+form{
+    width: 400px;
+    margin: 20px;
+}
+.form-div{
+    width: inherit;
+}
+.form-div input{
+    width: 100%;
+    margin: 10px 0;
+    padding: 3%;
+    outline: none;
+}
+.form-div span, li{
+    display: none;
+}
+.t_c{
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.t_c input{
+    width: 20px;
+}
+.t_c small{
+    font-size: 10px;
+}
+.form-btn{
+    width: 100%;
+    padding: 2%;
+    background-color: #DB5B3F;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.login-form{
+    width: screen;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+.login-form form{
+    width: 400px;
+}
+.google-auth.login{
+    width: 400px;
+    padding: 8px;
+    /* height: 30px; */
+    text-align: center;
+    color: #fff;
+    background-color: #DB5B3F;
+}
+.google-auth.login a{
+    text-decoration: none;
+    color: #fff;
+}
+.login-form .title h3{
+    color: #DB5B3F;
+
+}
+.login-form .title h3::after{
+    background: linear-gradient(#DB5B3F, #fff);
+
+}
